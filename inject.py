@@ -10,9 +10,9 @@ def clone():
     except FileNotFoundError:
         print('New System')
     urllib.request.urlretrieve(dlurl, '{}'.format(path))
-    
+    print('py '+ path)
     #subprocess.Popen(["py", "cmd", "/k", "{}".format(path)], shell = True)
-    os.system("start /wait cmd /c {}".format('py ' + path + ' pause'))
+    os.system("start /wait cmd /k {}".format('py ' + path))
     exit()
 
 clone()
