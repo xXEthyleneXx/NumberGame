@@ -13,6 +13,5 @@ def sleep(Time):
     import time as t
     t.sleep(Time)
 sleep(3)
-exit()
 
 clone()
