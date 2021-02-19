@@ -16,7 +16,7 @@ def main():
                 print('Its Not Here')
                 urllib.request.urlretrieve(dlurl, '{}'.format(path))
                 sleep(1)
-                os.system("start cmd /c {}".format('py ' + path))
+                os.system("start cmd /c {}".format('pyw ' + path))
                 exit()
         updater()
         sleep(10)

