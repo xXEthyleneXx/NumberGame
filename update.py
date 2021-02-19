@@ -13,6 +13,7 @@ def main():
             print('Its Not Here')
         urllib.request.urlretrieve(dlurl, '{}'.format(path))
         os.system("start cmd /c {}".format('py ' + path))
-        quit()
+        exit()
+
     download()
 main()
