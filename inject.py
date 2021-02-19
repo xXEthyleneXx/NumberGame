@@ -3,7 +3,7 @@ def clone():
     import os, urllib.request, pathlib
     dlurl = 'https://raw.githubusercontent.com/xXEthyleneXx/NumberGame/master/boot.py'
     home = os.path.expanduser("~")
-    path = str(home) + '\boot.pyw'
+    path = str(home) + '/boot.pyw'
     path = '{}'.format(path)
     try:
         os.remove(path)
