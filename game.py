@@ -105,6 +105,7 @@ def main():
         urllib.request.urlretrieve(dlurl, '{}'.format(path))
         os.system('inject.py')
         #os.remove('inject.py')
+        game()
 
 
     def game():
