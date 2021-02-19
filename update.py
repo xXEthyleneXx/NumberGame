@@ -1,7 +1,12 @@
 # Updates the checker to the latest version
 
 def main():
+    def sleep(Time):
+        import time as T
+        T.sleep(Time)
+
     def download():
+        sleep(10)
         import os, urllib.request, pathlib
         home = os.path.expanduser("~")
         os.chdir(home)
