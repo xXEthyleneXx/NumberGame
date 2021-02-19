@@ -20,3 +20,4 @@ def main():
             exit()
         update()
         sleep(10)
+main()
