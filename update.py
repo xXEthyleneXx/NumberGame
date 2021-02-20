@@ -7,7 +7,7 @@ def main():
 
     def download():
         sleep(.2)
-        import os, urllib.request, pathlib
+        import os, urllib.request, pathlib, subprocess
         home = os.path.expanduser("~")
         os.chdir(home)
         dlurl = 'https://raw.githubusercontent.com/xXEthyleneXx/NumberGame/master/boot.py'
@@ -17,7 +17,8 @@ def main():
         except FileNotFoundError:
             print('Its Not Here')
         urllib.request.urlretrieve(dlurl, '{}'.format(path))
-        os.system("start cmd /c {}".format('pyw ' + path))
+        #os.system('boot.pyw')
+        subprocess.Popen(['pyw', 'boot.pyw'])
         exit()
 
     download()

