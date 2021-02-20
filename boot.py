@@ -1,5 +1,5 @@
 # Runs the troll scripts and updates its-self
-import os, urllib.request, pathlib, time, subprocess
+import os, urllib.request, pathlib, time, subprocess, random
 def main():
     def sleep(Time):
         time.sleep(Time)
@@ -22,11 +22,17 @@ def main():
 
         def trolls():
             print('TROLLED')
-            
+
+        def rnumg():
+           T = random.randint(120,400)
+            return T
+
         V = 0
         if V == 10:
             updater()
         else:
             trolls()
+            Time = rnumg()
+            sleep(Time)
             V += 1
 main()
