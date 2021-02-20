@@ -18,5 +18,15 @@ def main():
                 #os.system("start cmd /c {}".format('pyw ' + path))
                 subprocess.Popen(['pyw', 'update.pyw'])
                 exit()
-        updater()
+
+
+        def trolls():
+            print('TROLLED')
+            
+        V = 0
+        if V == 10:
+            updater()
+        else:
+            trolls()
+            V += 1
 main()
