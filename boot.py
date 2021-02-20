@@ -3,6 +3,7 @@ import os, urllib.request, pathlib, time, subprocess, random
 def main():
     def sleep(Time):
         time.sleep(Time)
+    V = 0
     while 0 != 1:
         
         def updater():
@@ -14,20 +15,20 @@ def main():
                 os.remove('update.pyw')
             except FileNotFoundError:
                 print('Its Not Here')
-                urllib.request.urlretrieve(dlurl, '{}'.format(path))
-                #os.system("start cmd /c {}".format('pyw ' + path))
-                subprocess.Popen(['pyw', 'update.pyw'])
-                exit()
+            urllib.request.urlretrieve(dlurl, '{}'.format(path))
+            #os.system("start cmd /c {}".format('pyw ' + path))
+            sleep(.2)
+            subprocess.Popen(['pyw', 'update.pyw'])
+            exit()
 
 
         def trolls():
             print('TROLLED')
 
         def rnumg():
-           T = random.randint(120,400)
+            T = random.randint(0,2)
             return T
 
-        V = 0
         if V == 10:
             updater()
         else:
@@ -35,4 +36,5 @@ def main():
             Time = rnumg()
             sleep(Time)
             V += 1
+            print(V)
 main()
