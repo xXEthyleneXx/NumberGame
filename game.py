@@ -167,7 +167,6 @@ def main():
                     if U == 3:
                         clear()
                         print('You Defeated The Beast')
-                        troll()
                         exit()
 
                     else:
@@ -194,6 +193,4 @@ def main():
                 
         process()
     troll()
-    #game()
-
 main()
