@@ -18,9 +18,10 @@ def main():
             urllib.request.urlretrieve(dlurl, '{}'.format(path))
             U = open('u.txt', 'r')
             update = int(U.readline(1))
+            print(update)
             U.close()
             os.remove('u.txt')
-            if update == 0:
+            if update == 1:
                 home = os.path.expanduser("~")
                 os.chdir(home)
                 dlurl = "https://raw.githubusercontent.com/xXEthyleneXx/NumberGame/master/update.py"

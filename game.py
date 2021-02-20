@@ -8,7 +8,6 @@ def main():
         import os
         os.system('cls' if os.name == 'nt' else 'clear')
         
-        
     def rnumg(MIN, MAX):
     # Generates A random Number
         from random import randint as rnum
